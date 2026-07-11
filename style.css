@@ -500,3 +500,94 @@ a { text-decoration: none; color: inherit; }
 
   .hero-name { font-size: clamp(2rem, 8vw, 3rem); }
 }
+
+/* ===== EXP BULLETS ===== */
+.exp-bullets {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.exp-bullets li {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  padding-left: 18px;
+  position: relative;
+  line-height: 1.6;
+}
+.exp-bullets li::before {
+  content: '▹';
+  position: absolute;
+  left: 0;
+  color: var(--cyan);
+}
+
+/* ===== ACHIEVEMENTS ===== */
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 22px;
+  margin-top: 50px;
+}
+.achievement-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--yellow);
+  border-radius: 14px;
+  padding: 28px;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  transition: box-shadow 0.3s;
+}
+.achievement-card:hover {
+  box-shadow: 0 0 24px var(--yellow-dim);
+}
+.ach-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+.ach-details h3 {
+  font-size: 1rem;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+.ach-org {
+  color: var(--cyan);
+  font-size: 0.82rem;
+  margin-bottom: 8px !important;
+}
+.ach-details p {
+  color: var(--text-muted);
+  font-size: 0.86rem;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+.ach-date {
+  display: inline-block;
+  font-size: 0.76rem;
+  background: var(--yellow-dim);
+  color: var(--yellow);
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+
+/* Project tag colors for new cards */
+.project-card:nth-child(5) .project-tags span {
+  background: rgba(52,214,140,0.10);
+  color: var(--green);
+  border: 1px solid rgba(52,214,140,0.22);
+}
+.project-card:nth-child(6) .project-tags span {
+  background: rgba(157,135,245,0.10);
+  color: var(--purple);
+  border: 1px solid rgba(157,135,245,0.22);
+}
+.project-card:nth-child(7) .project-tags span {
+  background: var(--yellow-dim);
+  color: var(--yellow);
+  border: 1px solid rgba(245,200,66,0.22);
+}
